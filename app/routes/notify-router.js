@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-router.post('/',(req,res) => {
-  res.json({message: 'ok'})
-});
+const notifyController = require('./../controllers/notify-controller');
+router.post('/',notifyController);
 
 module.exports = router;
 
